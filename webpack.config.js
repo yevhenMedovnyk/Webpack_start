@@ -47,7 +47,11 @@ module.exports = {
 		new CssMinimizerPlugin(),
 		new CopyPlugin({
 			patterns: [
-				{ from: path.resolve(__dirname, 'src/other'), to: path.resolve(__dirname, 'dist/other') }
+				{
+					from: path.resolve(__dirname, 'src/other'),
+					to: path.resolve(__dirname, 'dist/other'),
+					noErrorOnMissing: true,
+				}
 				//{ from: "other", to: "public" },
 			],
 		}),
