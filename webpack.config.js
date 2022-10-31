@@ -41,7 +41,6 @@ module.exports = {
 		port: 8000,
 		hot: true,
 		open: true,
-		compress: true,
 	},
 	plugins: [
 		new CssMqpackerPlugin(),
