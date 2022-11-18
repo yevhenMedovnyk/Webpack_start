@@ -112,9 +112,17 @@ module.exports = {
 			`...`,
 			new CssMinimizerPlugin(),
 			new CssMqpackerPlugin({
-				sort: function (a, b) {
-					return b.localeCompare(a);
+				sort: ((a, b) => b.localeCompare(
+					a,
+					undefined, {
+					numeric: true,
+					sensitivity: 'base'
 				}
+				))
+				//sort:
+				//	function (a, b) {
+				//	return b.localeCompare(a);
+				//}
 			}),
 		],
 	},
